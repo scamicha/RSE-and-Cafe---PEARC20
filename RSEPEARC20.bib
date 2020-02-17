@@ -201,7 +201,7 @@
   title    = "The Research Software Engineer",
   abstract = "Research is increasingly digital. Twenty-first century research has been characterised by the rise of digital methods, the third and fourth paradigms of science – computational simulation and data-intensive research. In their turn, these new approaches are both built on a common foundation – computer software.Yet despite this increasing reliance on software in research, professional practices for developing research software in academia lag far behind those in the commercial sector. Computational research tools are often fragile, generally not sustainable or usable beyond the lifetime of a given project, and frequently unsuitable for scrutiny. Those trained solely within academia often employ ad-hoc or casual development techniques. Institutions miss out on opportunities to increase the impact of their research by producing robust software deliverables that could be used and cited by their peers.Computational work must reflect the committed attitude of experimentalists towards caring about precise, professional, repeatable, meticulous work – no-one with the same casual attitude to experimental instrumentation as many researchers have to code would be allowed anywhere near a lab. This is striking considering how often research results now depend on software.Software engineering professionals are trained in best practices, and in the best commercial institutions follow a disciplined approach to the design, construction, testing and maintenance of software systems. Attempts to leverage these skills within academia by employing contract programmers typically fail, due to otherwise talented programmers lacking sufficient research experience and a necessary appreciation of the significant cultural differences between business and academia. Software engineers that do have research experience and good knowledge of the underlying domain are, however, in very short supply, due to the lack of appropriate institutional homes and career progression paths for their work.This paper provides a synthesis of discussions that took place during and after the 2012 Collaborations Workshop organized by the Software Sustainability Institute in Oxford, UK.",
   author   = "Robert Baxter and {Chue Hong}, Neil and Dirk Gorissen and James Hetherington and Ilian Todorov",
-  year     = "2012",
+  year     = {2012},
   month    = "9",
   day      = "10",
   language = "English",
@@ -231,40 +231,59 @@ year={2015},
 booktitle={IFIP/IEEE International Symposium on Integrated Network Management}
 }
 
-@misc{SourceForge,
-  title = {{SourceForge: The Complete Open-Source and Business Software Platform},
-  howpublished = {\url{https://sourceforge.net}},
-  note = {Accessed: 2019-11-14}}
+@inproceedings{Phillippe2016,
+abstract = {This paper presents results from a survey conducted on a new role in academia: the Research Software Engineer (RSE). The survey provides much needed demographic information about the education, ﬁeld, gender, job satisfaction and career plans of the people of RSEs. The community is found to be highly educated, derive mainly from the hard sciences, and to be predominantly male. Respondents report satisfaction in their jobs, but indicate that career progression is both difﬁcult and opaque. This paper supports a continued discussion about the experience of RSEs and recommends further investigation into this important community.},
+author = {Phillippe, O and Chue Hong, N, and Hettrick, S },
+title = { Preliminary analysis of a survey of Research Software Engineers in the UK },
+booktitle = { Proceedings of the Fourth Workshop on Sustainable Software for Science: Practice and Experiences (WSSSPE4): },
+location = { University of Manchester, Manchester, UK },
+year = 2016,
+volume = 1686
 }
 
-@misc{EduLicense,
-  title = {{Educational Community License, Version 2.0 (ECL-2.0)},
-  howpublished = {\url{http://opensource.org/licenses/ECL-2.0}},
+
+@online{SourceForge,
+  title = {SourceForge: The Complete Open-Source and Business Software Platform},
+  url = {https://sourceforge.net},
+  note = {Accessed: 2019-11-14},
+}
+
+@online{EduLicense,
+  title = {Educational Community License, Version 2.0 (ECL-2.0)},
+  url = {http://opensource.org/licenses/ECL-2.0},
+  year = {2007},
   note = {Accessed: 2019-11-15}}
 }
 
-@misc{RENCI,
-  title = {{Educational Community License, Version 2.0 (ECL-2.0)},
-  howpublished = {\url{https://softwaredatacitation.renci.org/Workshop\%20Report/SoftwareDataCitation_workshop_report_2015_April_20_without_logo.pdf}},
+@report{RENCI,
+  author = {Ahalt, S and Carsey, T and Couch, A and Hooper, R and Ibanez, L and Idaszak, R and Jones, M and Lin, J and Robinson, E},
+  title = {NSF Workshop on Supporting Scientific Discovery through Norms and Practices for Software and Data Citation and Attribution },
+  year = {2015}
   note = {Accessed: 2020-01-24}}
 }
 
-@misc{Nangia17,
-  title = {{Understanding Software in Research: Initial Results from Examining Nature and a Call for Collaboration},
-  howpublished = {\urlhttps://ieeexplore.ieee.org/document/8109183},
-  note = {Accessed: 2020-01-24}}
+@inproceedings{Nangia17,
+  title={Understanding software in research: Initial results from examining nature and a call for collaboration},
+  author={Nangia, Udit and Katz, Daniel S},
+  booktitle={2017 IEEE 13th International Conference on e-Science (e-Science)},
+  pages={486--487},
+  year={2017},
+  organization={IEEE}
 }
 
-@misc{Hettrick14,
-  title = {{It's impossible to conduct research without software, say 7 out of 10 UK researchers},
-  howpublished = {S.J. Hettrick et al, UK Research Software Survey 2014",​ DOI:10.5281/zenodo.1183562. T},
-  note = {Accessed: 2020-01-24}}
+@online{Hettrick14,
+  title = {It's impossible to conduct research without software, say 7 out of 10 UK researchers},
+  author = {Hettrick, S.J.},
+  doi = {DOI:10.5281/zenodo.1183562},
+  note = {Accessed: 2020-01-24},
+  year = {2014}
 }
 
-@misc{Johnson2016,
-  title = {{Best Practices for HPC Software Developers Webinar Series Session 3: Distributed Version Control and Continuous Integration Testing },
-  howpublished = {\url{http://ideas-productivity.org/wordpress/wp-content/uploads/2018/03/webinar003-HPC-Session3.pdf}},
-  note = {Accessed: 2019-11-15}
+@online{Johnson2016,
+  title = {Best Practices for HPC Software Developers Webinar Series Session 3: Distributed Version Control and Continuous Integration Testing },
+  url={http://ideas-productivity.org/wordpress/wp-content/uploads/2018/03/webinar003-HPC-Session3.pdf},
+  lastaccessed = {2019-11-15},
+  year = {2018}
 }
 @inproceedings{Sufi2014,
  author = {Sufi, Shoaib and Hong, Neil Chue and Hettrick, Simon and Antonioletti, Mario and Crouch, Stephen and Hay, Alexander and Inupakutika, Devasena and Jackson, Mike and Pawlik, Aleksandra and Peru, Giacomo and Robinson, John and Carr, Les and De Roure, David and Goble, Carole and Parsons, Mark},
@@ -285,19 +304,45 @@ booktitle={IFIP/IEEE International Symposium on Integrated Network Management}
  keywords = {collaborations workshop, reproducibility, reproducible research, software sustainability, software sustainability institute},
 } 
 
-@Book{Hagen2006,
-  author =       "William von Hagen",
-  year =         "2006",
-  title =        "The Definitive Guide to GCC",
-  volume =       "1",
-  edition =      "3rd",
-  address =      "",
-  publisher =    "Springer",
-  doi =          "",
-  url =          "",
-  editor =       "",
-  number =       "",
-  month =        "",
-  note =         "(book)",
+@book{Hagen2006,
+  title={The definitive guide to GCC},
+  author={Von Hagen, William},
+  year={2011},
+  publisher={Apress}
+}
+@article{DeBie2006,
+    author = {De Bie, Tijl and Cristianini, Nello and Demuth, Jeffery P. and Hahn, Matthew W.},
+    title = "{CAFE: a computational tool for the study of gene family evolution}",
+    journal = {Bioinformatics},
+    volume = {22},
+    number = {10},
+    pages = {1269-1271},
+    year = {2006},
+    month = {03},
+    abstract = "{Summary: We present CAFE (Computational Analysis of gene Family Evolution), a tool for the statistical analysis of the evolution of the size of gene families. It uses a stochastic birth and death process to model the evolution of gene family sizes over a phylogeny. For a specified phylogenetic tree, and given the gene family sizes in the extant species, CAFE can estimate the global birth and death rate of gene families, infer the most likely gene family size at all internal nodes, identify gene families that have accelerated rates of gain and loss (quantified by a p-value) and identify which branches cause the p-value to be small for significant families.Availability: Software is available from Contact:mwh@indiana.edu}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btl097},
+    url = {https://doi.org/10.1093/bioinformatics/btl097},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/22/10/1269/651109/btl097.pdf},
 }
 
+@article{hahn2007gene,
+  title={Gene family evolution across 12 Drosophila genomes},
+  author={Hahn, Matthew W and Han, Mira V and Han, Sang-Gook},
+  journal={PLoS genetics},
+  volume={3},
+  number={11},
+  year={2007},
+  publisher={Public Library of Science}
+}
+
+@article{han2013estimating,
+  title={Estimating gene gain and loss rates in the presence of error in genome assembly and annotation using CAFE 3},
+  author={Han, Mira V and Thomas, Gregg WC and Lugo-Martinez, Jose and Hahn, Matthew W},
+  journal={Molecular biology and evolution},
+  volume={30},
+  number={8},
+  pages={1987--1997},
+  year={2013},
+  publisher={Oxford University Press}
+}

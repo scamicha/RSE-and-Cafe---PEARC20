@@ -27,13 +27,12 @@
 %% the commands and values with those provided to you when you
 %% complete the rights form.
 \setcopyright{acmcopyright}
-\copyrightyear{2018}
-\acmYear{2018}
+\copyrightyear{2020}
+\acmYear{2020}
 \acmDOI{10.1145/1122445.1122456}
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[PEARC '20]{Woodstock '18: ACM Symposium on Neural
-  Gaze Detection}{June 03--05, 2020}{Portland, OR}
+\acmConference[PEARC '20]{PEARC '20: Practice & Experience in Advanced Research Computing }{June 03--05, 2020}{Portland, OR}
 
 \usepackage{listings}
 
@@ -69,10 +68,10 @@
 \author{Ben Fulton}
 %% \authornote{Both authors contributed equally to this research.}
 \email{befulton@iu.edu}
-\orcid{1234-5678-9012}
+\orcid{0000-0002-6430-2361}
 \author{Scott Michael}
 \authornotemark[1]
-\email{webmaster@marysville-ohio.com}
+\email{scamicha@iu.edu}
 \affiliation{%
   \institution{Indiana University}
   \city{Bloomington}
@@ -128,7 +127,7 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
- Although some academics will choose to adopt the skills they need to engineer reliable software, many will not have either the time or inclination to do so. A more scalable and sustainable approach to embedding these skills in academia is to ensure that academics have access to Research Software Engineers. (https://core.ac.uk/download/pdf/158355112.pdf ) In this paper we describe the significant tasks and alterations suggested by an RSE embedded in scientific software project.
+ When funding was approved for an updated version of the CAFE bioinformatics application, some of the money was set aside for internal improvements to the code base, including analyzing and improving the performance of the application, refactoring, and enhancing user support. In order to achieve those goals, personnel had to be added to the project with two skills: an understanding of the research involved as well as research in general, and an understanding of software engineering. Although it was not a formal title at the time, this is roughly the definition of a Research Software Engineer (RSE). In this paper we describe the significant tasks and alterations suggested and performed by an RSE embedded in a scientific software project and highlight the benefits of adding an RSE to a project. Particular emphasis is placed on the performance improvements that can be realized with RSE involvement. We also discuss the funding strategy used for RSEs for this project. 
 \end{abstract}
 
 %%
@@ -136,39 +135,65 @@
 %% Please copy and paste the code instead of the example below.
 %%
 \begin{CCSXML}
+\begin{CCSXML}
 <ccs2012>
- <concept>
-  <concept_id>10010520.10010553.10010562</concept_id>
-  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
-  <concept_significance>500</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010575.10010755</concept_id>
-  <concept_desc>Computer systems organization~Redundancy</concept_desc>
-  <concept_significance>300</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010553.10010554</concept_id>
-  <concept_desc>Computer systems organization~Robotics</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
- <concept>
-  <concept_id>10003033.10003083.10003095</concept_id>
-  <concept_desc>Networks~Network reliability</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
+<concept>
+<concept_id>10011007</concept_id>
+<concept_desc>Software and its engineering</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10011006.10011008.10011024.10011034</concept_id>
+<concept_desc>Software and its engineering~Concurrent programming structures</concept_desc>
+<concept_significance>100</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10010940.10011003.10011002</concept_id>
+<concept_desc>Software and its engineering~Software performance</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10010940.10011003.10011687</concept_id>
+<concept_desc>Software and its engineering~Software usability</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10011006.10011008.10011009.10011011</concept_id>
+<concept_desc>Software and its engineering~Object oriented languages</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10011074.10011075.10011077</concept_id>
+<concept_desc>Software and its engineering~Software design engineering</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10011074.10011111.10011696</concept_id>
+<concept_desc>Software and its engineering~Maintaining software</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10011007.10011074.10011134.10003559</concept_id>
+<concept_desc>Software and its engineering~Open source model</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
 </ccs2012>
 \end{CCSXML}
 
-\ccsdesc[500]{Computer systems organization~Embedded systems}
-\ccsdesc[300]{Computer systems organization~Redundancy}
-\ccsdesc{Computer systems organization~Robotics}
-\ccsdesc[100]{Networks~Network reliability}
+\ccsdesc[500]{Software and its engineering}
+\ccsdesc[100]{Software and its engineering~Concurrent programming structures}
+\ccsdesc[500]{Software and its engineering~Software performance}
+\ccsdesc[500]{Software and its engineering~Software usability}
+\ccsdesc[300]{Software and its engineering~Object oriented languages}
+\ccsdesc[500]{Software and its engineering~Software design engineering}
+\ccsdesc[300]{Software and its engineering~Maintaining software}
+\ccsdesc[300]{Software and its engineering~Open source model}
+\end{CCSXML}
 
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{datasets, neural networks, gaze detection, text tagging}
+\keywords{software engineering, performance analysis, software support, research software}
 
 
 %%
@@ -182,17 +207,31 @@ Software is as essential as data in the modern practice of science. 20\% of NSF 
 
 However, a large percentage say they have no training in software development \cite{Hettrick14}. Some academics may thus employ casual development techniques, resulting in fragile research software that is often not sustainable or usable beyond the lifetime of a given funding cycle. Introducing a Research Software Engineer (RSE) into a given project may improve the project by: combining a professional attitude to the exercise of software engineering with a deep understanding of research topics; leading the design and construction of increasingly complex research software systems; co-designing of research requirements; and understanding and addressing software engineering questions that arise in research planning \cite{Baxter12}.
 
-In this case study, we examine the successes and failures of embedding a Research Software Engineer into a specific project, the phylogenetic code CAFE \cite{Hahn2005}. CAFE analyzes changes in gene family size in a way that accounts for phylogenetic history and provides a statistical foundation for evolutionary inferences. The program uses a birth and death process to model gene gain and loss across a user-specified phylogenetic tree. The distribution of family sizes generated under this model can provide a basis for assessing the significance of the observed family size differences among taxa.
+Scientific software development can take a variety of approaches. It can be a one-off script designed to demonstrate a theory; it can be an application made public in the hope that others may find it useful, but lacking documentation or other user niceties; it can be a fundamental library designed for other researchers to base their work upon; or it can be an application used and documented with clear support lines. The usefulness of an RSE varies depending on the type of software being created. The scientist creating the script requires very little assistance; while the researcher wishing to create a widely useful application may well prefer to offload some of the required work (documentation, testing, support channels) onto an engineer.
 
-Scientific software can take a variety of approaches. It can be a one-off script designed to demonstrate a theory; it can be an application made public in the hope that others may find it useful, but lacking documentation or other user niceties; it can be a fundamental library designed for other researchers to base their work upon; or it can be an application used and documented with clear support lines. The usefulness of an RSE varies depending on the type of software being created. The scientist creating the script requires very little assistance; while the researcher wishing to create a widely useful application may well prefer to offload some of the required work (documentation, testing, support channels) onto an engineer. CAFE has historically been an application of this sort.
+In this case study, we examine the successes and failures of embedding a RSE into a specific project, the phylogenetic code CAFE \cite{Hahn2005}. In the spectrum mentioned above, CAFE has historically been an application with a large user base and clear support channels for its use. CAFE analyzes changes in gene family size in a way that accounts for phylogenetic history and provides a statistical foundation for evolutionary inferences. The program uses a birth and death process to model gene gain and loss across a user-specified phylogenetic tree. The distribution of family sizes generated under this model can provide a basis for assessing the significance of the observed family size differences among taxa.
 
-\section{Methodology}
-\scott{get text from matt hahn outlining capabilites of CAFE 3, 4, and 5?}
+The outline of this paper is as follows: section \ref{sec:background}
+
+\section{Background} \label{sec:background}
 CAFE was originally developed as a MATLAB application. As various researchers worked on the project it was rewritten: first into a Java application with a graphical user interface; then into a C application with its own scripting language. The C version, CAFE 3, was made available on SourceForge \cite{SourceForge}. 
 
-In 2017 we \ben{(We? Matt? IU?)} were given a sustaining grant for the development of CAFE. The goals of the grant included continuing development of the likelihood method for inferring gene gain and loss rates; performance analysis and enhancement; and various user and community support initiatives. To further these goals, an RSE was added to the group of researchers that were working on the project.
+More than 15 years ago, the original software that became known as CAFE (Computational Analysis of gene Family Evolution) was written in Matlab by two researchers working in the Cafe Roma just off the campus of the University of California, Davis. The first paper \cite{Hahn2005} detailing the model and calculations to be carried out did not release any software along with the analyses. At the time, this was not expected of all scientific papers, even those describing new methods.
+
+In order to make the method available to independent researchers, the first version of CAFE was re-written in Java, largely by one of the original co-authors, for use on the command-line or as a GUI \cite{DeBie2006}. This version was intended to be used on a personal computer, and the code was available only from the senior author’s laboratory website at Indiana University.
+
+CAFE 2 was completely re-written in C by a grad student in the lab, and included several new features, including lineage-specific evolutionary rates \cite{hahn2007gene}. As the number of options had grown and CAFE had begun to be used more on HPC systems, the GUI was discarded.
+
+CAFE 3 was an update of version 2, and featured many more new types of analyses that could be run \cite{han2013estimating}. Most importantly, CAFE was now hosted on Sourceforge, and researchers from around the world could independently work on the source code.
+
+CAFE 4 was the first version where C++ was used to improve performance. There were no new features with this release, and the largest externally visible difference was that the project was now hosted on GitHub. 
+
+In 2017 an NSF sustaining grant was awarded for the development of CAFE. The goals of the grant included continuing development of the likelihood method for inferring gene gain and loss rates; performance analysis and enhancement; and various user and community support initiatives. To further these goals, an RSE was added to the group of researchers that were working on the project.
 
 An initial analysis of the project's conformance to best practices was performed. Some of the best practices considered included: whether a software repository had readme files, license files and continuous integration configuration \cite{Sufi2014}. Sufi et al. also recommend Github and Make as two tools that are beneficial to software development.
+
+
+\section{Software Engineering Methods}
 
 \subsection{Source Control}
 The application's release on SourceForge in 2014 was a significant step forward in best practices. Version control is an essential component in software development. It establishes a common context, a chronological sequence of events, and serves as “ground truth” for a software project. Without knowing the specific version of a code applied, scientific results are not reproducible. \cite{Johnson2016} However, as a norm was developed that scientific software was released on GitHub, the decision was made to move the code for CAFE 4 from SourceForge to that platform.
@@ -243,10 +282,6 @@ At this writing, CAFE 4 contained 169 tests and 903 individual assertions, while
     
     The decision was made to simultaneously work on the rewrite and introduce a major new feature: Allowing lambda values to vary along a gamma curve. Classes were introduced to model the original CAFE lambda model and the new gamma model, and at each step, the output of CAFE 4 was carefully tested against the output of CAFE 5 to verify no anomalies had been introduced. At the same time, unit tests were added to verify the correct performance of the code. Occasionally, descriptive tests were added to the CAFE 4 test base to verify that the results were the same.
     
-    \ben{rewrite was a good idea? What is the best approach all at once or parts at a time? Cover the pros and cons in both approaches}
-        
-
-
 \subsection{Performance}
 
 \ben{Optimization: Profile existing code, determine hot-spots (don't miss the forest for the trees), make faster, lather, rinse, repeat..}
@@ -261,7 +296,7 @@ There are three major factors implicated in the performance of CAFE: (1) the siz
 
 We analyzed the performance of CAFE at three points: v3.1, the final version before an RSE was brought onto the project; v4.2, the final version developed in C and after some initial performance evaluations and modifications had been introduced; and v5.0, the latest version. 
 
-\begin{tabular}{ l c r f }
+\begin{tabular}{ r r r r }
   Threads & v3.1 & v4.2 & v5.0 \\
   1 & 240 & 67    & 148 \\
   2 & 229 & 53    &  70 \\
@@ -272,7 +307,7 @@ We analyzed the performance of CAFE at three points: v3.1, the final version bef
 
 The performance of CAFE5 as the number of gene families are increased.
 
-\begin{tabular}{ l c r f }
+\begin{tabular}{ r r }
   Gene Families & Time \\
   5000 & 21  \\
   10000 & 37  \\
@@ -282,7 +317,18 @@ The performance of CAFE5 as the number of gene families are increased.
   30000 & 104
 \end{tabular}
 
-\ben{Another chart: Compare v4 and v5 with various thread counts and 30K families}
+Given a large number (30k) of families to work with, CAFE 5 utilizes 
+available threads effectively.
+
+\begin{tabular}{ r r r }
+  Threads & v4.2 & v5.0 \\
+  32 & 3600 & 113 \\
+  16 & 1060 & 103 \\
+  8 & 960 & 141 \\
+  4 & 600 & 244    \\
+  2 & 600 & 540    \\
+  1 & 900 & 780
+\end{tabular}
 
 \scott{Look at PEACR facilitation track to find papers to referrence}
   
